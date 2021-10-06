@@ -1,0 +1,19 @@
+  <%= simple_form_for (form) do |f| %>
+  <div class="forms">
+    <%= f.input :name, label: "Nome Completo:" %>
+    <%= f.input :phone, label: "Telefone de Contato:" %>
+    <%= f.input :email, label: "Email:" %>
+    <%= f.input :prefecture, label: "Prefeitura:" %>
+    <%= f.input :address, label: "Endereço:" %>
+    <%= f.input :driver, label: "Carteira de Motorista:" %>
+    <%= f.input :licences, label: "Outras Licenças ou Carteiras:" %>
+    <%= f.input :passport, label: "Passaporte:" %>
+    <%= f.input :my_number, label: "My Number(se houver):" %>
+    <%= f.input :previous_job, label: "Experiência anterior:" %>
+    <%= f.input :job_kind, label: "Que tipo de trabalho você está procurando:" %>
+    <%= f.input :observations, label: "Outras observações(apto, mudança, etc...):" %>
+    <div class="text-center">
+      <%= f.submit @form.persisted? ? "EDITAR" : "FINALIZAR", class:"btn btn-ghost" %>
+    </div>
+  </div>
+  <% end %>
