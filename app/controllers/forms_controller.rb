@@ -61,7 +61,8 @@ class FormsController < ApplicationController
         :previous_job,
         :job_kind,
         :nihongo,
-        :turn
+        :turn,
+        photos: []
       )
   end
 end
