@@ -6,7 +6,12 @@ class FormsController < ApplicationController
   end
 
   def show
-    @form = Form.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Cadastro: #{@form.name}", template: "forms/show.html.erb"   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def new
