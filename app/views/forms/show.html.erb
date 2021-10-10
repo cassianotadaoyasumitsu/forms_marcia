@@ -25,4 +25,8 @@
   <p class="card-body"><%= @form.job_kind %></p>
   <label>Observações:</label>
   <p class="card-body"><%= @form.observations %></p>
+  <label>Imagens:</label>
+  <%= @form.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 </div>

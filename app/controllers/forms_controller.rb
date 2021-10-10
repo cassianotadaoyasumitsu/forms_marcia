@@ -59,7 +59,10 @@ class FormsController < ApplicationController
         :my_number,
         :observations,
         :previous_job,
-        :job_kind
+        :job_kind,
+        :nihongo,
+        :turn,
+        photos: []
       )
   end
 end
