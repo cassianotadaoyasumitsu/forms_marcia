@@ -30,7 +30,7 @@
   <label>Observações:</label>
   <p class="card-body"><%= @form.observations %></p>
   <label>Imagens:</label>
-  <% @article.photos.each do |photo| %>
+  <% @form.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
 </div>
