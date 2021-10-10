@@ -6,6 +6,8 @@ class CreateForms < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :prefecture
       t.text :address
+      t.string :nihongo
+      t.string :turn
       t.boolean :driver
       t.text :licences
       t.string :passport
