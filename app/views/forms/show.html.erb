@@ -11,6 +11,10 @@
   <p class="card-body"><%= @form.address %></p>
   <label>Email:</label>
   <p class="card-body"><%= @form.email %></p>
+  <label>Nihongo:</label>
+  <p class="card-body"><%= @form.nihongo %></p>
+  <label>Preferência de Turno:</label>
+  <p class="card-body"><%= @form.turn %></p>
   <label>Habilitação:</label>
   <p class="card-body"><%= @form.driver ? "Possui Carteira de Motorista" : "Não possui Carteira de Motorista" %></p>
   <label>Outras habilitações:</label>
@@ -26,7 +30,4 @@
   <label>Observações:</label>
   <p class="card-body"><%= @form.observations %></p>
   <label>Imagens:</label>
-  <%= @form.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
 </div>
