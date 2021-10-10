@@ -2,35 +2,37 @@
 <div class="text-center">
   <%= link_to "VOLTAR", forms_path, class: "btn btn-ghost" %>
 </div>
-<div class="card mt-3">
+<div class="card mt-3 p-5">
   <h3 class="text-center m-3"><%= @form.name %></h3>
-  <label>Telefone:</label>
+  <label><strong>Telefone:</strong></label>
   <p class="card-body"><%= @form.phone %></p>
-  <label>Endereço:</label>
+  <label><strong>Endereço:</strong></label>
   <p class="card-body"><%= @form.prefecture %></p>
   <p class="card-body"><%= @form.address %></p>
-  <label>Email:</label>
+  <label><strong>Email:</strong></label>
   <p class="card-body"><%= @form.email %></p>
-  <label>Nihongo:</label>
+  <label><strong>Nihongo:</strong></label>
   <p class="card-body"><%= @form.nihongo %></p>
-  <label>Preferência de Turno:</label>
+  <label><strong>Preferência de Turno:</strong></label>
   <p class="card-body"><%= @form.turn %></p>
-  <label>Habilitação:</label>
+  <label><strong>Habilitação:</strong></label>
   <p class="card-body"><%= @form.driver ? "Possui Carteira de Motorista" : "Não possui Carteira de Motorista" %></p>
-  <label>Outras habilitações:</label>
+  <label><strong>Outras habilitações:</strong></label>
   <p class="card-body"><%= @form.licences %></p>
-  <label>Passaporte:</label>
+  <label><strong>Passaporte:</strong></label>
   <p class="card-body"><%= @form.passport %></p>
-  <label>My Number:</label>
+  <label><strong>My Number:</strong></label>
   <p class="card-body"><%= @form.my_number %></p>
-  <label>Experiência anterior:</label>
+  <label><strong>Experiência anterior:</strong></label>
   <p class="card-body"><%= @form.previous_job %></p>
-  <label>Que tipo de trabalho você procura?:</label>
+  <label><strong>Que tipo de trabalho você procura?:</strong></label>
   <p class="card-body"><%= @form.job_kind %></p>
-  <label>Observações:</label>
+  <label><strong>Observações:</strong></label>
   <p class="card-body"><%= @form.observations %></p>
-  <label>Imagens:</label>
+  <label><strong>Imagens:</strong></label>
+  <div class="d-flex justify-content-between">
   <% @form.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
+  </div>
 </div>

@@ -5,10 +5,11 @@
     <%= f.input :email, label: "Email:" %>
     <%= f.input :prefecture, label: "Prefeitura:" %>
     <%= f.input :address, label: "Endereço:" %>
-    <%= f.input :nihongo, label: "Japonês:" %>
-    <%= f.input :turn, label: "Preferência de Turno:" %>
+    <%= f.input :nihongo, label: "Japonês:", collection: Form::NIHONGO %>
+    <%= f.input :turn, label: "Preferência de Turno:", collection: Form::TURN %>
     <%= f.input :driver, label: "Carteira de Motorista:" %>
     <%= f.input :licences, label: "Outras Licenças ou Carteiras:" %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :passport, label: "Passaporte:" %>
     <%= f.input :my_number, label: "My Number(se houver):" %>
