@@ -44,6 +44,6 @@ class FormsController < ApplicationController
   private
 
   def form_params
-    params.require(:form).permit(:name, :phone, :prefecture, :address, :driver, :licences, :passport, :my_number, :observations, :previous_job, :job_kind, :nihongo, :turn, photos: [])
+    params.require(:form).permit(:name, :phone, :prefecture, :email, :address, :driver, :licences, :passport, :my_number, :observations, :previous_job, :job_kind, :nihongo, :turn, photos: [])
   end
 end
