@@ -10,7 +10,8 @@ class CreateForms < ActiveRecord::Migration[6.0]
       t.string :turn
       t.boolean :driver
       t.text :licences
-      t.string :passport
+      t.string :zairyu
+      t.date :zairyu_date
       t.string :my_number
       t.text :previous_job
       t.text :job_kind

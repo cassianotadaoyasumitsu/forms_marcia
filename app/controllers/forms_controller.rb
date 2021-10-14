@@ -29,7 +29,7 @@ class FormsController < ApplicationController
   def update
     @form = Form.find(params[:id])
     if @form.update(form_params)
-        redirect_to form_path(params[:id])
+      redirect_to form_path(params[:id])
     else
       render :edit
     end
@@ -44,6 +44,23 @@ class FormsController < ApplicationController
   private
 
   def form_params
-    params.require(:form).permit(:name, :phone, :prefecture, :email, :address, :driver, :licences, :passport, :my_number, :observations, :previous_job, :job_kind, :nihongo, :turn, photos: [])
+    params.require(:form).permit(
+      :name,
+      :phone,
+      :prefecture,
+      :email,
+      :address,
+      :driver,
+      :licences,
+      :zairyu,
+      :zairyu_date,
+      :my_number,
+      :observations,
+      :previous_job,
+      :job_kind,
+      :nihongo,
+      :turn,
+      photos: []
+      )
   end
 end

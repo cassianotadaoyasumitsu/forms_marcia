@@ -1,5 +1,5 @@
   <%= simple_form_for (form) do |f| %>
-  <div class="forms">
+  <div class="forms mb-3">
     <%= f.input :name, label: "Nome Completo:" %>
     <%= f.input :phone, label: "Telefone de Contato:" %>
     <%= f.input :email, label: "Email:" %>
@@ -11,9 +11,10 @@
     <%= f.input :licences, label: "Outras Licenças ou Carteiras:" %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.input :passport, label: "Passaporte:" %>
+    <%= f.input :zairyu, label: "Zairyu Card:" %>
+    <%= f.input :zairyu_date, label: "Zairyu Card Vencimento:" %>
     <%= f.input :my_number, label: "My Number(se houver):" %>
-    <%= f.input :previous_job, label: "Experiência anterior:" %>
+    <%= f.input :previous_job, placeholder: "Ex: Nome da Fábrica, serviço: kumitate, kensa, tosou, kako, etc...", label: "Experiência anterior:" %>
     <%= f.input :job_kind, label: "Que tipo de trabalho você está procurando:" %>
     <%= f.input :observations, label: "Outras observações(apto, mudança, etc...):" %>
     <div class="text-center">
