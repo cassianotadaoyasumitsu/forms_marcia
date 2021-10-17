@@ -1,5 +1,7 @@
 Start Local Server:
 
-rails db:migrate
 bundle install
+
+rails db:migrate
+
 rails s
